@@ -13,7 +13,12 @@ class Factory implements FactoryContract
      *
      * @var array
      */
-    protected $options = [];
+	protected $options = [
+		'connection_timeout' => 500,
+		'cache_wsdl' => WSDL_CACHE_NONE,
+		'keep_alive' => false,
+		'compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP | SOAP_COMPRESSION_DEFLATE
+	];
 
     /**
      * Type mappings.
