@@ -1,0 +1,38 @@
+{
+    "name": "vividimpact/pace-api",
+    "description": "EFI Pace API Client",
+    "authors": [
+        {
+            "name": "Rob Gridley",
+            "email": "me@robgridley.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0.0",
+        "nesbot/carbon": "^2.24.0",
+        "doctrine/inflector": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pace\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always tests"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pace\\PaceServiceProvider"
+            ],
+            "aliases": {
+                "Pace": "Pace\\Facades\\Pace"
+            }
+        }
+    }
+}
