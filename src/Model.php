@@ -64,9 +64,10 @@ class Model implements ArrayAccess, JsonSerializable
      */
     public function __construct(Client $client, $type, array $attributes = [])
     {
-        if (!preg_match('/^([A-Z]+[a-z]*)+$/', $type)) {
-            throw new InvalidArgumentException('Type must be CapitalizedWords');
-        }
+        //Commented out per Brian 10/30/2019
+        //if (!preg_match('/^([A-Z]+[a-z]*)+$/', $type)) {
+        //    throw new InvalidArgumentException('Type must be CapitalizedWords');
+        //}
 
         $this->client = $client;
         $this->type = $type;
